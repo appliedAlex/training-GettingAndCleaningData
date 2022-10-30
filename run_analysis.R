@@ -30,4 +30,4 @@ extracted_data$testLabels <- activity_labels[extracted_data$testLabels, 2]
 grouped_data <- group_by(extracted_data, subject, testLabels)
 averaged_data <- summarize_if(grouped_data, is.numeric, mean)
 
-write.table(averaged_data, "TidyDataSet.txt")
+write.table(averaged_data, "TidyDataSet.txt", row.name=FALSE)
